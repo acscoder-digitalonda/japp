@@ -1,5 +1,5 @@
 import streamlit as st
-from serpapi import GoogleSearch
+import serpapi  
 import openai
 import time
 import csv
@@ -22,7 +22,7 @@ def fetch_serpapi_results(query, serpapi_key):
         "q": query,
         "api_key": serpapi_key  
     }
-    search = GoogleSearch(params)
+    search = serpapi.search(params)
     results = search.get_dict()
     
     # Extracting the organic results
