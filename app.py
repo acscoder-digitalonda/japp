@@ -234,6 +234,6 @@ def main():
     # Display the download link
     st.markdown(download_responses_link_csv, unsafe_allow_html=True)
 
-if _name_ == "__main__":
+if __name__ == "__main__":
     main()
     
